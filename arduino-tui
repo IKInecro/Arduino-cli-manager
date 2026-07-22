@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_PATH="$(readlink -f -- "$0")"
+ROOT="$(CDPATH= cd -- "$(dirname -- "$SCRIPT_PATH")" && pwd)"
+
+NODE="$(command -v node 2>/dev/null || true)"
+if [[ -z "${NODE:-}" ]]; then
+  # fallback: try nvm-managed node
+  if [[ -n "${NVM_DIR:-}" ]]; then
+    NODE="$(find "$NVM_DIR/versions/node" -maxdepth 3 -path '*/bin/node' -type f -perm -u+x -print -quit 2>/dev/null || true)"
+  fi
+fi
+
+[[ -n "${NODE:-}" ]] || { echo 'Node.js not found. Install Node.js >= 18 or activate NVM.' >&2; exit 1; }
+exec "$NODE" "$ROOT/src/index.mjs" "$@"

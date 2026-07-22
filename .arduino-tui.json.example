@@ -1,0 +1,7 @@
+{
+  "projectRoot": "/home/user/arduino-projects/my-sketch",
+  "fqbn": "esp8266:esp8266:nodemcuv2",
+  "port": "/dev/ttyUSB0",
+  "baud": "115200",
+  "targetFile": ""
+}

@@ -1,0 +1,13 @@
+{
+  "name": "arduino-cli-mng",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Terminal-based Arduino CLI dashboard — lightweight, zero dependencies, built for low-spec machines",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
