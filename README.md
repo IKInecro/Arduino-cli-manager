@@ -5,13 +5,12 @@
 <h1 align="center">🖥️ Arduino CLI Manager</h1>
 
 <p align="center">
-  <b>Terminal-based Arduino CLI dashboard — lightweight, zero dependencies, built for low-spec machines.</b>
+  <b>Terminal-based Arduino CLI dashboard — lightweight, built for low-spec machines.</b>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs">
-  <img src="https://img.shields.io/badge/platform-linux%20|%20macOS-lightgrey">
-  <img src="https://img.shields.io/badge/dependencies-0-brightgreen">
+  <img src="https://img.shields.io/badge/platform-linux%20|%20macOS%20|%20Windows-lightgrey">
 </p>
 
 > 💻 **Too slow for Arduino IDE?** The official IDE is heavy and laggy on old hardware. This tool gives you the full Arduino workflow — file management, board/library management, compile, upload, and serial monitor — directly from your terminal. No GUI overhead, no lag.
@@ -82,7 +81,9 @@ arduino-cli core install arduino:avr         # example: Arduino Uno
 | Software | Version | Notes |
 |----------|---------|-------|
 | **Node.js** | v18+ | ES Modules (`import`) |
-| **OS** | Linux / macOS | |
+| **OS** | Linux / macOS / Windows | |
+
+> On Windows, run `node src/index.mjs` directly instead of the `arduino-tui` shell script (use Git Bash / WSL for the shell launcher).
 
 ### 3. Optional
 
